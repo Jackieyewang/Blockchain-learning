@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "dfx": "0.7.1",
+  "canisters": {
+    "custom_greeting": {
+      "type": "motoko",
+      "main": "src/custom_greeting/main.mo"
+    },
+    "custom_greeting_assets": {
+      "type": "assets",
+      "source": [
+        "src/custom_greeting_assets/assets"
+      ],
+      "dependencies": [
+        "custom_greeting"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
