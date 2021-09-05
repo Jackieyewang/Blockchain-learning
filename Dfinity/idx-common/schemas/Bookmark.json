@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Bookmark",
+  "properties": {
+    "type": {
+      "type": "string",
+      "title": "type",
+      "maxLength": 50
+    },
+    "url": {
+      "type": "string",
+      "title": "url",
+      "maxLength": 2048
+    },
+    "title": {
+      "type": "string",
+      "title": "title",
+      "maxLength": 150
+    },
+    "description": {
+      "type": "string",
+      "title": "description",
+      "maxLength": 300
+    },
+    "date": {
+      "type": "string",
+      "title": "date",
+      "format": "date-time",
+      "maxLength": 25
+    },
+    "collections": {
+      "type": "array",
+      "title": "collections",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "maxLength": 25
+      }
+    },
+    "tags": {
+      "type": "array",
+      "title": "tags",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "maxLength": 25
+      }
+    },
+    "tokenId": {
+      "type": "string",
+      "title": "tokenId",
+      "maxLength": 512
+    },
+    "contract": {
+      "type": "string",
+      "title": "contract",
+      "maxLength": 512
+    },
+    "owner": {
+      "type": "string",
+      "title": "owner",
+      "maxLength": 512
+    },
+    "image": {
+      "type": "string",
+      "title": "image",
+      "maxLength": 2048
+    }
+  },
+  "required": ["url", "title", "collections", "date"]
+}

@@ -1,0 +1,103 @@
+{
+  "Addresses": {
+    "Swarm": [
+      "/ip4/0.0.0.0/tcp/4011",
+      "/ip4/0.0.0.0/tcp/4012/ws"
+    ],
+    "Announce": [],
+    "NoAnnounce": [],
+    "API": "/ip4/0.0.0.0/tcp/5011",
+    "Gateway": "/ip4/0.0.0.0/tcp/9011",
+    "RPC": "/ip4/127.0.0.1/tcp/5003",
+    "Delegates": [
+      "/dns4/node0.delegate.ipfs.io/tcp/443/https",
+      "/dns4/node1.delegate.ipfs.io/tcp/443/https",
+      "/dns4/node2.delegate.ipfs.io/tcp/443/https",
+      "/dns4/node3.delegate.ipfs.io/tcp/443/https"
+    ]
+  },
+  "Discovery": {
+    "MDNS": {
+      "Enabled": true,
+      "Interval": 10
+    },
+    "webRTCStar": {
+      "Enabled": true
+    }
+  },
+  "Bootstrap": [],
+  "Pubsub": {
+    "Router": "gossipsub",
+    "Enabled": true
+  },
+  "Swarm": {
+    "ConnMgr": {
+      "LowWater": 200,
+      "HighWater": 500
+    },
+    "DisableNatPortMap": false
+  },
+  "Routing": {
+    "Type": "dhtclient"
+  },
+  "API": {
+    "HTTPHeaders": {
+      "Access-Control-Allow-Origin": [
+        "*"
+      ],
+      "Access-Control-Allow-Methods": [
+        "GET",
+        "POST"
+      ],
+      "Access-Control-Allow-Headers": [
+        "Authorization"
+      ],
+      "Access-Control-Expose-Headers": [
+        "Location"
+      ],
+      "Access-Control-Allow-Credentials": [
+        "true"
+      ]
+    }
+  },
+  "Identity": {
+    "PeerID": "Qmckvz1Z2w9YNkJnYhHvBRptMirDy1UKQCPtSpvS9qPKsb",
+    "PrivKey": "CAASpwkwggSjAgEAAoIBAQDWV34Qn3udBW+MLlL7l5z7hE4mNoBz1h+iBn2n2NMdnqYYc+ATpY2dms8zHzFpdAN6TNyp8bKbg5LjwhRpkHx6b4xb1Yn0rCOmCaaveRjUWsBXSos42orbKZopQkkP0SXBR7Ib2GB+6GkufTSaoaMvK6I999XMJIE+5hWvDRxFaTri4qIa5QJ7DSWI2Qpl9r2qDNRbkFYjRiTqrYQVXYstp6FyAwmAm91/nTRM0x78NF8NvypTJ2XV3akyzLnX6hOdphR6uwNVctDAfLw/CoGkswAvfY2jkRJ5KSijW3mo0ao0JXcbJCCXlGTKO5qJ+MfUzXWo0r8j3JTDpXH1HwtjAgMBAAECggEAIgUtCzJlCl0sgVFw9mHwFrO/O6124evghXUGSLfPemoN7t+ldzjVq2hA7tpKm3RAgQ7mD0s/kBNoIyJQ3xiByWUfIAxaoy0XU2lAvaU43auxz6kTQ+jcFUEbKOVOd2Y42d6pVGYZmssEts5EpS52miwQykkl9ArvQK6ATpKEJDfvFNEwas3Yh635NnDM5ibFMFFlg4A7urWo/O3WiZWNrVi5WedbJ+bx1O2gYbEr4C6qDBM2wS5eu7D3EwpqpwFCzp7KOPMfqLUhwo5tmK0vPRb07gFQr+QP++RUqeS9EDnuPfQ03KeVdvZC0tG1nxH+Jn3kqqBVbic426u3ypWNUQKBgQD4nqyxLvCv/XMW9tjI6c0lTkEZbCTXgxCaxVpIMxydjHFyKWlhkhV7znbP3edgWF+78EIozy5Zst+TOOgeMRQd4YpLv6NQ3tf2S34cJ6XqRY942uWft7MZOOtjSjXDwoltV/FBNW1AxW18sBrLrBbLajFbrdCtv+0URpe50urbLwKBgQDctFSGwGMWKDDAJozyUFB/CDQh+4jZdxM9ZTGtmWdjZOfbP1RG709b1nkZ4TlHZITLaMQPod8ou5YDXs8ns1cSbwmy+z538X2z7KWhJaXcX4caVK+WeYHu0TC2rL1jFedobIKAZa3D8r5Edr/hZ2qkvcrugVuNBbW9jNbmZOo2DQKBgQCXPB6coYsz4x7xZzMz9FUgTlv3VPuMRWQCYe6rYLwVcmtIILzD55M9/rfzdm7bAqcpsdrs7Cqr0c2CxukcBIrSKnJv5aE4/nWskvuhsNSSj8HYqH9qCtrdiuxVN71A2cOzSf2txwwwjGgvowiJwKMVFgH0XOVF7CwRW2fMV+sZbQKBgFpcOn8xJWBc9Bi3r91FpK9d3HpNUao3ZlkspTo+JGY9WfAZ7ZddQ1CGbu55l8nzDat6KUt9KrCynKikmIvYkT2q2H2+/8R7ystviCCCGXYwZlARfBJPjTMJ0rf34VJAFY5bXtLSzmH7cIr3U3glrzPjwMIFlEYYoGAK2bFaf8nBAoGANw5WUYYYdU9iuua5Rq/wmiZd7/rkR736InGO+sAoD+p3XqlLlsDeWBIg9Wt9+SphqZom9ExKnSvHWzsUM2Q09K05MSZETlVscyOdSERtwvNK87OcB7qPDRKTkuA386JO+ecu2/ETq96QjGXVtSUZu7TSbq5smZgUw8lfvSmhj2c="
+  },
+  "Datastore": {
+    "Spec": {
+      "type": "mount",
+      "mounts": [
+        {
+          "mountpoint": "/blocks",
+          "type": "measure",
+          "prefix": "flatfs.datastore",
+          "child": {
+            "type": "flatfs",
+            "path": "blocks",
+            "sync": true,
+            "shardFunc": "/repo/flatfs/shard/v1/next-to-last/2"
+          }
+        },
+        {
+          "mountpoint": "/",
+          "type": "measure",
+          "prefix": "leveldb.datastore",
+          "child": {
+            "type": "levelds",
+            "path": "datastore",
+            "compression": "none"
+          }
+        }
+      ]
+    }
+  },
+  "Keychain": {
+    "dek": {
+      "keyLength": 64,
+      "iterationCount": 10000,
+      "salt": "FYDGRuW/TpNa+3NND9wYj9tk",
+      "hash": "sha2-512"
+    }
+  }
+}

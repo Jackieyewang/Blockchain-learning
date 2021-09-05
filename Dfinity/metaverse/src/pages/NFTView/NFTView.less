@@ -1,0 +1,134 @@
+@import '../../assets/styles/var.less';
+@import '../../assets/styles/mixins.less';
+
+.nft-view {
+  .masonry-wrapper {
+    min-height: 500px;
+  }
+
+  .ant-spin-container::after {
+    background: transparent;
+  }
+
+  .ant-spin-dot-item {
+    background: @pink;
+  }
+
+  .nft-title {
+    margin: 0 0 40px;
+    color: @pink;
+    text-align: center;
+    .title {
+      font-size: 32px;
+    }
+    .subtitle {
+      margin-top: 10px;
+      font-size: 22px;
+    }
+  }
+
+  .nft-item {
+    width: 25%;
+    padding-left: 4%;
+    margin-bottom: 4%;
+    cursor: pointer;
+
+    .item-inner {
+      overflow: hidden;
+      font-size: 16px;
+      color: @pink;
+      background: rgb(17, 34, 51);
+      border-radius: 4px;
+      box-shadow: rgb(#000, 0.4) 0 0 8px 0;
+      &:hover {
+        box-shadow: rgb(#8c8c8c, 0.4) 0 0 8px 0;
+        transition: all 0.1s ease 0s;
+      }
+
+      .pic-wrapper {
+        min-height: 234px;
+        overflow: hidden;
+        background: @pink;
+
+        .pic {
+          display: block;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .text-wrapper {
+        position: relative;
+        padding: 16px 12px 50px;
+        .name {
+          margin-top: 0;
+        }
+
+        .description {
+          margin-top: 4px;
+        }
+
+        .tag {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 0 8px;
+          font-size: 13px;
+          line-height: 26px;
+          color: @black;
+          background: @pink;
+          border-top-right-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+.modal-wrapper {
+  display: flex;
+  min-height: 540px;
+  max-height: 540px;
+
+  .modal-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 540px;
+    background: #4138be;
+
+    .pic {
+      width: 200px;
+      border: 4px solid @white;
+    }
+  }
+
+  .modal-right {
+    flex: 1;
+    padding: 40px;
+    overflow: auto;
+    background: @background-color-light;
+
+    .title {
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .desc {
+      .multi-ellipsis(6);
+    }
+
+    a {
+      color: rgb(32, 129, 226);
+    }
+  }
+}
+
+.ant-modal-body {
+  padding: 0;
+}
+
+.ant-modal-content {
+  overflow: hidden;
+  border-radius: 8px;
+}

@@ -1,0 +1,18 @@
+export enum COLLECTION_TYPE {
+  AllBookmarks = 'All',
+  Trash = 'Trash',
+  Unsorted = 'Unsorted',
+}
+
+export enum EVENT_TYPE {
+  SET_DID = 'SET_DID',
+  SET_COLLECTIONS_MENUS = 'SET_COLLECTIONS_MENUS',
+  LOGIN = 'LOGIN',
+  SELECT_MENUS = 'SELECT_MENUS',
+}
+
+export enum STORAGE_TYPE {
+  STORED_COLLECTIONS = 'STORED_COLLECTIONS',
+  STORED_COLLECTIONS_NAMES = 'STORED_COLLECTIONS_NAMES',
+  STORED_DID = 'STORED_DID',
+}

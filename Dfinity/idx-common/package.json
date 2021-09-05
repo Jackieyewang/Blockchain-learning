@@ -1,0 +1,44 @@
+{
+  "name": "idx-common",
+  "version": "0.1.0",
+  "license": "AGPL-3.0-or-later",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "files": [
+    "lib/"
+  ],
+  "dependencies": {
+    "3id-did-provider": "^1.0.2",
+    "@3id/connect": "^0.1.6",
+    "@ceramicnetwork/3id-did-resolver": "^1.2.0",
+    "@ceramicnetwork/common": "^1.0.0",
+    "@ceramicnetwork/http-client": "^1.0.0",
+    "@ceramicnetwork/stream-tile": "^1.0.7",
+    "@ceramicstudio/idx": "^0.12.0",
+    "@ceramicstudio/idx-constants": "^1.0.0",
+    "@ceramicstudio/idx-tools": "^0.11.0",
+    "core-js": "^3.15.1",
+    "dids": "^2.1.0",
+    "dotenv": "^8.2.0",
+    "ethers": "^5.3.1",
+    "fs": "^0.0.1-security",
+    "multicodec": "0.5.6",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "prepublish": "yarn build",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc -p tsconfig.json",
+    "build:cjs": "tsc -p tsconfig-cjs.json",
+    "build:scripts": "tsc -p tsconfig.scripts.json",
+    "idx:publish": "yarn idx:publish:schemas && yarn idx:publish:definitions && yarn idx:constants",
+    "idx:publish:schemas": "yarn build:scripts && node ./scripts/build/scripts/publishSchemas.js",
+    "idx:publish:definitions": "yarn build:scripts && node ./scripts/build/scripts/publishDefinitions.js",
+    "idx:constants": "yarn build:scripts && node ./scripts/build/scripts/jsonToConstants.js",
+    "test": "yarn build:scripts && node ./scripts/build/scripts/test.js"
+  },
+  "devDependencies": {
+    "jest-environment-node-single-context": "^26.2.0",
+    "ts-jest": "^26.4.4"
+  }
+}
