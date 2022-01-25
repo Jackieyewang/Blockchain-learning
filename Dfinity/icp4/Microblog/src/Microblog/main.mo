@@ -11,6 +11,7 @@ actor {
     public type Message = {
         text: Text;
         time: Time.Time;
+        //time 字段
     };
  
     public type Microblog = actor {
@@ -36,6 +37,7 @@ actor {
         let now = Time.now();
         let timestamp = now / 1000_000_000;
         let message : Message = {text = text; time = timestamp};
+        //记录当前时间
         messages := List.push(message, messages);
     };
     // 返回发布的消息和更新时间
@@ -55,6 +57,7 @@ actor {
             let msgs = await canister.posts(since: Time.Time);
             for (msg in Iter.fromArray(msgs)) {
                 if (since < msg.time) {
+                    //按时间删选消息
                     all := List.push(msg, all);
                 }               
             }
