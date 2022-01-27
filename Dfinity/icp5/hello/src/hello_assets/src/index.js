@@ -69,7 +69,7 @@ async function load_timeline() {
         timeline_metainfo.innerText =
             timeline[i].author + " post in " + timeConverter(timeline[i].time);
         let timeline_msg = document.createElement("p");
-        timeline_msg.innerText = timeline[i].msg;
+        timeline_msg.innerText = timeline[i].text;
 
         timeline_section.appendChild(timeline_metainfo);
         timeline_section.appendChild(timeline_msg);
